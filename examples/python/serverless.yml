@@ -1,0 +1,12 @@
+service: simple-function
+
+provider:
+  name: kubeless
+  runtime: python3.7
+
+plugins:
+  - serverless-kubeless
+
+functions:
+  simple-function:
+    handler: simplefunction.simple_function
