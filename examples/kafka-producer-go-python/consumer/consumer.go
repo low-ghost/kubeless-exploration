@@ -6,7 +6,7 @@ import (
 )
 
 // Hello sample function with dependencies
-func Hello(event functions.Event, context functions.Context) (string, error) {
+func ReadMessage(event functions.Event, context functions.Context) (string, error) {
 	logrus.Info(event.Data)
-	return "Hello world!", nil
+	return "Received message from kafka", nil
 }

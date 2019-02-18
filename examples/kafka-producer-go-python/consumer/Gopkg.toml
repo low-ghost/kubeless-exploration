@@ -1,4 +1,3 @@
-
 [[constraint]]
   name = "github.com/sirupsen/logrus"
   branch = "master"
