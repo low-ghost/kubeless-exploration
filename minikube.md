@@ -15,7 +15,7 @@ export CHANGE_MINIKUBE_NONE_USER=true
 You can technically run minikube natively on linux, but certain commands that help to get docker containers in don't work natively (specifically `eval $(minikube docker-env)`), so I'd recommend installing virtualbox or any other choice.
 
 ## Getting Started
-```
+```sh
 # easiest
 minikube start
 # with a named profile
