@@ -12,7 +12,7 @@ Besides the glowing review above, I don't like the fact that functions are alway
 [minikube.md](minikube.md)
 
 ## Getting Started
-Installation scripts are provided at `./scripts` and have some of there own documentation.
+Installation scripts are provided at [./scripts](./scripts) and have some of there own documentation.
 
 If you don't have the kubeless CLI installed, do so following kubeless directions or run the script provided here
 ```sh
@@ -25,7 +25,7 @@ Once minikube or whatever kubernetes cluster is up and you're in the right conte
 ```
 
 ## Examples
-A number of examples to follow along with in `./examples`, each with it's own README.md. `cd` into a directory and try it out. They build on each other, at least in terms of becoming more complex, in the order presented here.
+A number of examples to follow along with in [./examples](./examples), each with it's own README.md. `cd` into a directory and try it out. They build on each other, at least in terms of becoming more complex, in the order presented here.
 
 1. [Simple python function with HTTP and UI](examples/python/README.md)
 1. [Kafka producer with golang and python](examples/kafka-producer-go-python/README.md)
