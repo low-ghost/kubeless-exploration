@@ -1,9 +1,9 @@
 # Kafka Topics and Go Functions
 
-Kubeless provides (almost) out-of-the-box kafka support with built in features for creating and publishing topics. This example builds on some of the examples in kubeless by adding a producer kubeless function in the producer-python directory. Not a lot of documentation on that side of things, but once I got the host/port right (pretty obvious) everything else was by the book. The consumer is a standard golang kubeless function that just happens to be subscribed to the topic via kubeless's `trigger` command.
+Kubeless provides (almost) out-of-the-box kafka support with built in features for creating and publishing topics. This example builds on some of the examples in kubeless by adding a producer in the producer-python directory. Not a lot of documentation on that side of things, but once I got the host/port right (pretty obvious) everything else was by the book. The consumer is a standard golang kubeless function that just happens to be subscribed to the topic via kubeless's `trigger` command.
 
 ## Getting Started
-Talk a look in the scripts directory or go ahead and run the .sh files:
+Take a look in the [./scripts](./scripts) directory or go ahead and run the .sh files:
 ```sh
 # Install kafka, zookeeper and related systems in the cluster
 ./scripts/deploy-kafka.sh
