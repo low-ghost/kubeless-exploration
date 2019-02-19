@@ -6,7 +6,7 @@ Kubeless is a pretty bad-ass and easy to use implementation of FaaS (functions a
 A good portion of this repo (so far) is taken directly from [kubeless.io](kubeless.io) or easy to find documentation. Perhaps it's helpful to have it all in one place and I've included some helpful scripts and notes on the process.
 
 ## Takeaways
-Besides the glowing review above, I don't like the fact that functions are always up pods that are implemented via servers like bottle for python. Better approach would be something like fission's where functions are executed from a pool and so don't need to always have running resources per function. Then again, pods aren't expensive. I also haven't yet implemented autoscaling in kubeless, so can't comment on that.  
+Besides the glowing review above, I don't like the fact that functions are always-up pods that are implemented via servers, such as bottle for python. Better approach would be something like fission's where functions are executed from a pool and so don't need to always have running resources per function. Then again, pods aren't expensive. I also haven't yet implemented autoscaling in kubeless, so can't comment on that.  
 
 ## Minikube Installation and Use
 [minikube.md](minikube.md)
