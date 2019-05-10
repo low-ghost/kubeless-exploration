@@ -1,31 +1,11 @@
-# Kubeless Exploration
+# FaaS on Kubernetes Exploration
 
-## What's this all about?
-Kubeless is a pretty bad-ass and easy to use implementation of FaaS (functions as a service) on kubernetes with dead simple setup and implementation. It's compliant with the AWS Lambda CLI and serverless framework (via a plugin), supports a number of popular programming languages or you can implement custom runtimes, and event triggers, Kafka, Kinesis, monitoring, logging, and so on are all easy to setup and intuitive.
+## Why?
 
-A good portion of this repo (so far) is taken directly from [kubeless.io](kubeless.io) or easy to find documentation. Perhaps it's helpful to have it all in one place and I've included some helpful scripts and notes on the process.
+Function as a Service is a new approach to applications (2014 introduction with AWS Lambda platform) that allows developers to focus on small units of business logic and can encourage better separation and decoupling of the codebase along these units. Applications in a FaaS-centric architecture are simple functions that don't need to focus on routing or server operation and relieve developers of needing to focus on server management or networking (to a large extent). The architecture unveiled by serverless applications is perhaps better at event driven workflows, auto-scaling, consuming less resources, and enabling fast, agile, iterative development cycles. Existing solutions are not without their problems though: observability is more difficult, we leave behind the world of kubernetes and often end up with heavier reliance on separate vendor systems like AWS, deployment and configuration can be tricky and so on.
 
-## Takeaways
-Besides the glowing review above, I don't like the fact that functions are always up pods that are implemented via servers like bottle for python. Better approach would be something like fission's where functions are executed from a pool and so don't need to always have running resources per function. Then again, pods aren't expensive. I also haven't yet implemented autoscaling in kubeless, so can't comment on that.  
+## Kubernetes Native Solutions
+Kubernetes based solutions for FaaS approach the problems of existing systems by remaining within kubernetes, simplifying deployment, often building out a UI for maintaining functions and observing logs, and often coming with out-of-the-box or easy to deploy tools for notifications, queues and streaming data.
 
 ## Minikube Installation and Use
 [minikube.md](minikube.md)
-
-## Getting Started
-Installation scripts are provided at `./scripts` and have some of there own documentation.
-
-If you don't have the kubeless CLI installed, do so following kubeless directions or run the script provided here
-```sh
-./scripts/install-kubeless-cli.sh
-```
-
-Once minikube or whatever kubernetes cluster is up and you're in the right context, install kubeless in that cluster
-```sh
-./scripts/kubeless-deployment.sh
-```
-
-## Examples
-A number of examples to follow along with in `./examples`, each with it's own README.md. `cd` into a directory and try it out. They build on each other, at least in terms of becoming more complex, in the order presented here.
-
-1. [Simple python function with HTTP and UI](examples/python/README.md)
-1. [Kafka producer with golang and python](examples/kafka-producer-go-python/README.md)

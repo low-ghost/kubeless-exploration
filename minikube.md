@@ -1,6 +1,6 @@
 # Minikube Installation and Use 
 
-For better (maybe) local development experience.
+For better (maybe) local development experience. Directories within this repo may include other configuration details.
 
 ## Installation and Config
 On linux
